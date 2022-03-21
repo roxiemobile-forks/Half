@@ -1,14 +1,14 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
     name: "Half",
 
     platforms: [
-        .iOS("8.0"),
-        .macOS("10.10"),
-        .tvOS("9.0"),
-        .watchOS("2.0")
+        .iOS("12.0"),
+        .macOS("10.12"),
+        .tvOS("12.0"),
+        .watchOS("3.0"),
     ],
 
     products: [
@@ -19,7 +19,7 @@ let package = Package(
         .target(name: "CHalf"),
         .testTarget(name: "CHalfTests", dependencies: ["CHalf", "Half"]),
 
-        .target(name: "Half", dependencies: ["CHalf"]),
+        .target(name: "Half", dependencies: ["CHalf"], exclude: ["Half.swift.gyb"]),
         .testTarget(name: "HalfTests", dependencies: ["Half"])
     ],
 
