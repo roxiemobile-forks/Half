@@ -5,10 +5,10 @@ let package = Package(
     name: "Half",
 
     platforms: [
-        .iOS("9.0"),
-        .macOS("10.10"),
-        .tvOS("9.0"),
-        .watchOS("2.0")
+        .iOS("12.0"),
+        .macOS("10.12"),
+        .tvOS("12.0"),
+        .watchOS("3.0"),
     ],
 
     products: [
